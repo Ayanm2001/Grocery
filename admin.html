@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Admin Panel</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0%;
+    }
+
+    header {
+        background-color: #ff7800;
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    footer {
+        background-color: #ff7800;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .sales,
+    .last-orders {
+        flex-basis: 45%;
+    }
+
+    .last-orders ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .last-orders li {
+        border: 1px solid #ddd;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    .last-orders li:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+        background-color: #ff7800;
+        color: white;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #b8661d;
+    }
+
+    .add-product {
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin: 20px;
+        box-shadow: rgb(189, 186, 186);
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .button-container button {
+        padding: 10px 20px;
+        margin: 0 10px;
+        background-color: #d8c0ab;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .button-container button:hover {
+        background-color: #e97006;
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Welcome, Admin</h1>
+    </header>
+
+    <section class="content">
+        <div class="sales">
+            <h2>Sales Records</h2>
+            <p>Total Sales: 0</p>
+            <p>Today's Sales: 0</p>
+        </div>
+        <div class="last-orders">
+            <h2>Last 3 Orders</h2>
+            <ul>
+                <li>Order ID: 001 | Item: Apple | Amount: $5</li>
+                <li>Order ID: 002 | Item: Banana | Amount: $7</li>
+                <li>Order ID: 003 | Item: Orange | Amount: $3</li>
+            </ul>
+        </div>
+        <div class="add-product">
+            <h2>Add Product</h2>
+            <form onsubmit="addProduct(); return false;">
+                <label for="product-name">Product Name:</label><br>
+                <input type="text" id="product-name" name="product-name"><br>
+                <label for="product-price">Product Price:</label><br>
+                <input type="text" id="product-price" name="product-price"><br><br>
+                <input type="submit" value="Submit" name="button1">
+            </form>
+        </div>
+
+        
+    </section>
+    <div class="button-container" style="display: flex; justify-content: center; margin-top: 20px; margin-bottom: 20px;">
+        <button onclick="location.href='user_details.php';">User Details</button>
+        <button onclick="location.href='ordered_items.php';" style="margin-left: 20px;">Ordered Items</button>
+    </div>
+    <footer>
+        <p>&copy; 2023 G-Home</p>
+    </footer>
+</body>
+
+</html>
